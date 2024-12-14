@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Blog</title>
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+  <h1>Edit Blog</h1>
+
+  <!-- Update Blog Form -->
+  <form class="blog-input"action="/update/<%= id %>" method="POST">
+    <textarea name="updatedBlog" required><%= blog %></textarea>
+    <button type="submit">Update Blog</button>
+  </form>
+</body>
+</html>

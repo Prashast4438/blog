@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Display</title>
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+
+  <h1 class="header">All Blogs</h1>
+
+  <!-- Add New Blog Form -->
+
+  <form class="blog-input"  action="/add" method="POST">
+    <textarea name="newBlog" placeholder="Write your blog here..." required></textarea>
+    <button class="submit-button" type="submit">Add Blog</button>
+  </form>
+
+  <!-- Display all blogs -->
+  <% blogs.forEach((blog, index) => { %>
+    <div class="blog-post">
+      <h3>Blog <%= index + 1 %></h3>
+      <p clas="blog-post p"><%= blog %></p>
+      <a href="/edit/<%= index %>">Edit</a>
+      
+    </div>
+  <% }) %>
+</body>
+</html>
